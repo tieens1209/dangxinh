@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NOEL_V2</title>
+    <title>Dáng Xinh</title>
     <style>
       body {
         margin: 0;
@@ -167,7 +167,7 @@
   <body>
     <div id="loader">
       <div class="spinner"></div>
-      <div class="loader-text">Loading Holiday Magic</div>
+      <div class="loader-text">Loading Dáng Xinh...</div>
     </div>
 
     <div id="canvas-container"></div>
@@ -765,8 +765,8 @@
           const mid1 = result.landmarks[0][9]; // Điểm giữa tay 1 (thay vì cổ tay)
           const mid2 = result.landmarks[1][9]; // Điểm giữa tay 2
           const clapDist = Math.hypot(mid1.x - mid2.x, mid1.y - mid2.y);
-          console.log("Clap dist:", clapDist); // Debug
-          if (clapDist < 0.15 && performance.now() - lastClapTime > 300) {
+          // console.log("Clap dist:", clapDist); // Debug
+          if (clapDist < 0.1 && performance.now() - lastClapTime > 400) {
             const audio = document.getElementById("christmasAudio");
             if (audio.paused) {
               audio.play().catch((e) => console.log("Audio play failed:", e));
@@ -776,6 +776,7 @@
             lastClapTime = performance.now();
           }
         }
+      
       }
 
       function setupEvents() {
