@@ -766,7 +766,7 @@
           const mid2 = result.landmarks[1][9]; // Điểm giữa tay 2
           const clapDist = Math.hypot(mid1.x - mid2.x, mid1.y - mid2.y);
           // console.log("Clap dist:", clapDist); // Debug
-          if (clapDist < 0.1 && performance.now() - lastClapTime > 400) {
+          if (clapDist < 0.3 && performance.now() - lastClapTime > 1500) {
             const audio = document.getElementById("christmasAudio");
             if (audio.paused) {
               audio.play().catch((e) => console.log("Audio play failed:", e));
